@@ -1,0 +1,264 @@
+/* =========================
+   Global Reset
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eef2f7;
+  font-family: "Poppins", Arial, sans-serif;
+  zoom: 100%;
+}
+
+/* =========================
+   App Container
+========================= */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* =========================
+   Main Box
+========================= */
+.main-box {
+  width: 100%;
+  max-width: 850px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   Title
+========================= */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title h1 {
+  font-size: 26px;
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.title p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* =========================
+   Input Area
+========================= */
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.input-area input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.input-area button {
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background: #2563eb;
+}
+
+/* =========================
+   Loader
+========================= */
+.loader {
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  border-radius: 50%;
+  border: 6px solid #e5e7eb;
+  border-top: 6px solid #3b82f6;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   Score Section
+========================= */
+.score-section {
+  width: 160px;
+  margin: 20px auto;
+}
+
+/* =========================
+   Chart Area
+========================= */
+.chart-area {
+  max-width: 420px;
+  height: 300px;
+  margin: 20px auto;
+}
+
+/* =========================
+   Chart Switch Button
+========================= */
+button {
+  display: block;
+  margin: 10px auto 20px;
+}
+
+/* =========================
+   Word Cloud
+========================= */
+.wordcloud-box {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 420px;
+  height: 260px;
+  border: 2px dashed #c7d2fe;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+
+/* =========================
+   Filter & Sort
+========================= */
+.filter-sort {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.filter-sort input,
+.filter-sort select {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+/* =========================
+   Tabs
+========================= */
+#tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #e5e7eb;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.tab.active {
+  background: #3b82f6;
+  color: white;
+}
+
+/* =========================
+   Reviews
+========================= */
+.reviews {
+  margin-top: 15px;
+}
+
+.review {
+  background: #f9fafb;
+  border-left: 5px solid #3b82f6;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.review.positive {
+  border-color: #16a34a;
+}
+
+.review.negative {
+  border-color: #dc2626;
+}
+
+.review.neutral {
+  border-color: #f59e0b;
+}
+
+/* =========================
+   Pagination
+========================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+}
+
+.pagination button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 600px) {
+  .input-area {
+    flex-direction: column;
+  }
+
+  .filter-sort {
+    flex-direction: column;
+  }
+
+  .main-box {
+    padding: 18px;
+  }
+
+  .title h1 {
+    font-size: 22px;
+  }
+}
